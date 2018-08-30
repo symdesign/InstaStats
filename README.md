@@ -13,5 +13,5 @@ python save.py <account>
 
 ```
 # m h dom mon dow command
-55 19 * * * screen -dmS stats python save.py <username>
+55 19 * * * screen -dmS stats python save.py <account>
 ```
