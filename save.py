@@ -51,11 +51,11 @@ print('')
 print('Starting to scrape the data from',account)
 soup = BeautifulSoup(browser.page_source,"html.parser")
 
-numbers = soup.select('header.vtbgv ul li')
+numbers = soup.select('#react-root header ul li')
 
-posts = numbers[0].find('span').find('span').contents[0]
-followers = numbers[1].find('span').contents[0]
-following = numbers[2].find('span').contents[0]
+posts = numbers[0].find('span').contents[0]
+followers = numbers[1].find('a').find('span').contents[0]
+following = numbers[2].find('a').find('span').contents[0]
 
 
 # format numbers
